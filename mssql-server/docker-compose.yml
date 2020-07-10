@@ -1,0 +1,11 @@
+version: "3"
+services:
+    mssql-server:
+        image: "mcr.microsoft.com/mssql/server:2017-latest"
+        environment:
+            SA_PASSWORD: Secr3tpwd
+            ACCEPT_EULA: "Y"
+        volumes:
+          - ./mssql:/var/opt/mssql
+        ports:
+          - "1433:1433"
